@@ -1,11 +1,11 @@
-AI tool: Cursor
+AI tool: ChatGPT Edu (GPT-4o)
 
 Prompts I used:
-- Help wire the request form so it actually posts to process-request.php and shows a response in Codespaces.
-- Walk me through running php -S and opening the site when the Ports tab is empty / port already in use.
+- Help wire the request form so it posts to process-request.php and shows a response in Codespaces.
+- Walk me through php -S and opening the site when Ports is empty or says the address is already in use.
 
 How AI helped:
-Mostly troubleshooting the connection path — making sure the form action pointed at the PHP file, that I was running the PHP server inside Codespaces (not local PowerShell), and that I was opening the forwarded URL instead of just clicking the HTML file in the editor. Once that path was clear, submitting the form showed the confirmation message.
+Mostly the connection path — form action pointing at the PHP file, running the PHP server inside Codespaces (not local PowerShell), and opening the forwarded port URL instead of clicking the HTML file in the editor. Once that was sorted, submitting the form showed the confirmation message.
 
 Suggestion I tested / changed:
-AI suggested opening index.html from the file tree for testing. That doesn’t run PHP. I ignored that and used php -S 0.0.0.0:8000 + the forwarded port 8000 URL instead, which is what actually made the form submit work.
+It suggested testing by opening index.html from the file tree. That doesn’t run PHP. I used php -S 0.0.0.0:8000 and the forwarded port 8000 URL instead, which is what made the form submit work.
