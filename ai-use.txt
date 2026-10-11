@@ -1,12 +1,11 @@
-AI tool used:
-Cursor (Composer / Auto)
+AI tool: Cursor
 
-Prompts used:
-1. Help complete Lab 1 Peer Tutoring Hub from the assignment instructions, using the existing starter files in lab1/.
-2. Check that Bootstrap 5.3, form labels/ids/names, navigation, PHP echo response, and file structure match the rubric.
+Prompts I used:
+- Help wire the request form so it actually posts to process-request.php and shows a response in Codespaces.
+- Walk me through running php -S and opening the site when the Ports tab is empty / port already in use.
 
 How AI helped:
-The assistant reviewed the starter HTML/CSS against the lab requirements, fixed broken image and link paths, added Bootstrap 5.3 CDN links with custom CSS loaded afterward, completed the request form with Bootstrap form classes, created process-request.php with the required echo statement, and drafted this ai-use.txt file. I reviewed each generated file so I can explain the HTML structure, Bootstrap classes, CSS rules, and PHP opening tag / echo line.
+Mostly troubleshooting the connection path — making sure the form action pointed at the PHP file, that I was running the PHP server inside Codespaces (not local PowerShell), and that I was opening the forwarded URL instead of just clicking the HTML file in the editor. Once that path was clear, submitting the form showed the confirmation message.
 
-Suggestion tested, revised, or rejected:
-AI first suggested a more complex welcome-card layout with large gradient styling from leftover CSS. I rejected that approach and kept a simpler Bootstrap navbar + container layout so the design stays professional, readable, and easier to explain for grading.
+Suggestion I tested / changed:
+AI suggested opening index.html from the file tree for testing. That doesn’t run PHP. I ignored that and used php -S 0.0.0.0:8000 + the forwarded port 8000 URL instead, which is what actually made the form submit work.
