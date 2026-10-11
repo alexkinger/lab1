@@ -3,9 +3,10 @@ AI tool: ChatGPT Edu (GPT-4o)
 Prompts I used:
 - Help wire the request form so it posts to process-request.php and shows a response in Codespaces.
 - Walk me through php -S and opening the site when Ports is empty or says the address is already in use.
+- Clean up the navigation so it doesn’t look clunky.
 
 How AI helped:
-Mostly the connection path — form action pointing at the PHP file, running the PHP server inside Codespaces (not local PowerShell), and opening the forwarded port URL instead of clicking the HTML file in the editor. Once that was sorted, submitting the form showed the confirmation message.
+Mostly the connection path — form action pointing at the PHP file, running the PHP server inside Codespaces (not local PowerShell), and opening the forwarded port URL instead of clicking the HTML file in the editor. Also helped simplify the nav (shorter labels, brand + links in one clean row) so the pages feel less crowded.
 
 Suggestion I tested / changed:
-It suggested testing by opening index.html from the file tree. That doesn’t run PHP. I used php -S 0.0.0.0:8000 and the forwarded port 8000 URL instead, which is what made the form submit work.
+It suggested testing by opening index.html from the file tree. That doesn’t run PHP. I used php -S 0.0.0.0:8000 and the forwarded port 8000 URL instead, which is what made the form submit work. For the nav, I skipped keeping the heavy blue Bootstrap navbar bar and went with a lighter top bar instead.
