@@ -30,7 +30,12 @@
                 <form action="process-request.php" method="post">
                     <div class="mb-3">
                         <label class="form-label" for="course">Course</label>
-                        <input class="form-control" id="course" name="course" type="text" required>
+                        <select class="form-select" id="course" name="course" required>
+                            <option value="" selected disabled>Select a course</option>
+                            <option value="IS 6465">IS 6465</option>
+                            <option value="IS 4410">IS 4410</option>
+                            <option value="MATH 1090">MATH 1090</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
